@@ -1,0 +1,315 @@
+html, body {
+	margin: 0;
+	font-family: Garamond;
+  }  
+
+  .body_fondo{
+	position: relative;
+	background-image: url(../src/img/BANNER.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.body_fondo::before {
+	content: ""; /* contenido vacío */
+	display: block; /* para que ocupe todo el ancho y alto */
+	position: fixed; /* se coloca encima de la imagen */
+	top: 0; /* ajustamos para que ocupe toda la pantalla */
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: #fffff255; color gris semi-transparente */
+	z-index: -1;
+}
+
+.guiaID{
+	padding-top: 8%;
+    color: #000000;
+    text-shadow: 5px 2px 2px #ffffff;
+	font-size: 25px;
+	/* background-color: rgba(0, 0, 0, 0.145); */
+	font-weight: bolder;
+	
+}
+
+
+
+table {
+    border-collapse: collapse;
+    background-color: #ffffff;
+    opacity: 0.9;
+    margin: 0 auto 15%;
+    width: 50%;
+	
+}
+
+  
+  th, td {
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #ffffff;
+	color: rgb(32, 32, 32);
+  }
+  
+  th {
+    background-color: #7fb536;
+	/* background-color: #f59c2f; */
+	color: #000000;
+	white-space: nowrap;
+
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f59c2f;
+  }
+  
+  tr:hover {
+    background-color: #7eb536;
+	opacity: 0.9;
+	
+  }
+  
+  form {
+    margin-bottom: 10%;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding-top: 5%;
+    padding: 5px;
+    border: 3px solid #e6007e;
+    border-radius: 5px;
+    text-align: center;
+    
+  }
+
+  .btn {
+    background-color: #e6007e;
+    border: none;
+    color:  #ffffff;
+    padding: 12px;
+    display: inline-block;
+    font-size: 100%;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 9px 6px 9px rgba(0, 0, 0, 0.34);
+	font-weight: 700;
+
+	
+  }
+
+
+/*HEADER*/
+.headerC {
+	background-color: #7fb536;
+	box-shadow: 0px 4px 20px rgb(255, 255, 255);
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	
+}
+
+
+.navC {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	flex: 1;
+    width: 35%; /* ancho de la imagen */
+    height: 100%; /* altura de la imagen */
+}
+
+.navC ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.navC li {
+	margin-left: 20px;
+}
+
+
+/* boton inicio */
+.navC a {
+	display: flex;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 28px;
+	border: 3px solid #000000;
+	transition: color 0.3s ease-in-out;
+	border-radius: 10px;
+	padding: 10px;
+	font-weight: 700;
+    background-color: #e6007e;
+}
+
+.navC a:hover {
+	color: #000000;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.btn-login {
+	background-color: #f79902;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-right: 10px;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.btn-login:hover {
+	background-color: #e68a00;
+}
+
+.btn-register {
+	background-color: #ffffff;
+	color: #000000;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.btn-register:hover {
+	background-color: #f79902;
+}
+
+.containerheader {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+	.navC ul {
+		display: none;
+	}
+
+}
+
+/*FIN HEADER*/
+
+
+/* estilo y fijación del pie de página */
+
+.footer_encabezado div{
+	background: #000000;
+	left: 0px;
+	bottom: 0px;
+	color: #ffffff;
+	display: grid;
+	justify-content: center;
+	font-size: 150%;
+}
+
+#footer{
+	height: 50px;
+	width: 100%;
+	background: #000000;
+	left: 0px;
+	bottom: 0px;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-around;
+	/* position: fixed; */
+}  
+
+.nombre_casilla{
+	/* color: #fff; */
+	font-size: 150%;
+}
+
+/* para acomodar a tamaños de pantallas  */
+
+	   @media screen and (max-width: 768px) {
+		/* Estilos para pantallas de hasta 768px de ancho */
+		table, thead, tbody, th, td, tr { 
+		  display: block; 
+		}
+
+	  
+		thead tr { 
+		  position: absolute;
+		  top: -9999px;
+		  left: -9999px;
+		}
+	  
+		td { 
+		  border: 1px solid black;
+		  position: relative;
+		  padding-left: 55%; 
+		}
+	  
+		td:before { 
+		  position: absolute;
+		  top: 6px;
+		  left: 6px;
+		  width: 45%; 
+		  padding-right: 10px; 
+		  white-space: nowrap;
+		  
+
+		}
+	  
+		/* Ajuste para cada columna */
+		td:nth-of-type(1):before { content: "Nombre del referido"; }
+		td:nth-of-type(2):before { content: "Periodo de matrícula"; }
+		td:nth-of-type(3):before { content: "Valor del bono"; }
+		td:nth-of-type(4):before { content: "Estado de pago"; }
+
+		td:before {
+			font-size: 70%;
+			font-weight: bold;
+			color: #ffffff;
+			background-color: #e6007e;
+			padding: 7px;
+			border-radius: 4px;
+		  }
+
+		  .logo {
+			/* flex: 1; */
+			width: 100%; /* ancho de la imagen */
+			height: 100%; /* altura de la imagen */
+		}
+		.guiaID{
+			padding-top: 40%;
+		}
+	
+
+		@media screen and (max-width: 500px) {
+
+			
+		td:before {
+			font-size: 70%;
+			font-weight: bold;
+			color: #e6007e;
+			background-color: #ffffff;
+			border: 2px solid #e6007e;
+			padding: 7px;
+			border-radius: 4px;
+		  }
+		}
+	
+		.body_fondo {
+			background-image: none; /* quitar la imagen de fondo */
+			background-color: #ffffff; /* agregar un color de fondo */
+			}
+		}
